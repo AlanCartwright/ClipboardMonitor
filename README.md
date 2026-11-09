@@ -1,17 +1,28 @@
 # Clipboard Monitor
 
-Clipboard Monitor is a .NET Framework console application that listens for Windows clipboard updates and logs clipboard event details.
+Clipboard Monitor is a .NET Framework 4.8.1 console app that listens for Windows clipboard updates and logs event details in real time.
 
-## What it does
+## Features
 
-- Subscribes to clipboard change notifications
-- Displays event metadata (timestamps, sequence number, owner/foreground process)
-- Provides simple console controls (Ctrl+C to stop, Space to clear)
+- Receives clipboard change notifications via a hidden message window
+- Logs event metadata (local/UTC timestamp, sequence number, owner/foreground process)
+- Reads clipboard snapshot details for each change event
+- Console hotkeys:
+  - `Ctrl+C` to stop
+  - `Space` to clear the screen
+
+## Requirements
+
+- Windows
+- .NET Framework 4.8.1
+- Visual Studio 2022/2026 or MSBuild tools compatible with .NET Framework projects
 
 ## Build
 
-Open `ClipboardMonitor.slnx` in Visual Studio and build the solution.
+1. Open `ClipboardMonitor.slnx` in Visual Studio.
+2. Build the solution.
 
 ## Run
 
-Start the app from Visual Studio or run the compiled executable from `bin/`.
+- Run from Visual Studio, or
+- Execute the built binary from `bin\`.
